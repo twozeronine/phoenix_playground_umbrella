@@ -1,0 +1,20 @@
+{
+    "name": "loc-phoenix-dev-container",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "loc-phoenix-dev-container",
+    "workspaceFolder": "/home/vscode/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "jakebecker.elixir-ls",
+				"esbenp.prettier-vscode",
+				"pgourlain.erlang",
+				"royalmist.vscode-eex-format",
+				"eamodio.gitlens"
+            ]
+        }
+    },
+    "features": {},
+    "remoteUser": "root",
+    "shutdownAction": "stopCompose"
+}
