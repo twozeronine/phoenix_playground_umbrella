@@ -25,6 +25,7 @@ defmodule PhoenixPlaygroundDomain.MixProject do
 
   defp deps do
     [
+      {:phoenix_playground, in_umbrella: true},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"}
     ]

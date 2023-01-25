@@ -30,6 +30,8 @@ defmodule PhoenixPlaygroundWeb.MixProject do
 
   defp deps do
     [
+      {:phoenix_playground, in_umbrella: true},
+      {:phoenix_playground_domain, in_umbrella: true},
       {:phoenix, "~> 1.6.15"},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.0"},
@@ -41,7 +43,6 @@ defmodule PhoenixPlaygroundWeb.MixProject do
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
-      {:phoenix_playground, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"}
     ]
