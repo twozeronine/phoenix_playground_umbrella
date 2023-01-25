@@ -1,24 +1,28 @@
-defmodule PhoenixPlayground.DataCase do
+defmodule PhoenixPlaygroundDomain.DataCase do
   use ExUnit.CaseTemplate
 
   using do
     quote do
-      alias PhoenixPlayground.Repo
+      alias PhoenixPlaygroundDomain.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import PhoenixPlayground.DataCase
+      import PhoenixPlaygroundDomain.DataCase
     end
   end
 
   setup tags do
-    PhoenixPlayground.DataCase.setup_sandbox(tags)
+    PhoenixPlaygroundDomain.DataCase.setup_sandbox(tags)
     :ok
   end
 
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixPlayground.Repo, shared: not tags[:async])
+    pid =
+      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixPlaygroundDomain.Repo,
+        shared: not tags[:async]
+      )
+
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 

@@ -1,0 +1,2 @@
+defmodule PhoenixPlaygroundDomain do
+end

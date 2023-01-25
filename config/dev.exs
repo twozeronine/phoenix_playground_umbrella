@@ -1,14 +1,5 @@
 import Config
 
-config :phoenix_playground, PhoenixPlayground.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "phoenix_playground_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
@@ -28,6 +19,17 @@ config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
       ~r"lib/phoenix_playground_web/templates/.*(eex)$"
     ]
   ]
+
+config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "phoenix_playground_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10,
+  port: 25432,
+  priv: "priv/repo"
 
 config :logger, :console, format: "[$level] $message\n"
 

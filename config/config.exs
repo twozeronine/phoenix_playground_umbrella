@@ -1,16 +1,13 @@
 import Config
 
-config :phoenix_playground,
-  ecto_repos: [PhoenixPlayground.Repo]
-
 config :phoenix_playground_web,
-  ecto_repos: [PhoenixPlayground.Repo],
+  ecto_repos: [PhoenixPlaygroundDomain.Repo],
   generators: [context_app: :phoenix_playground]
 
 config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: PhoenixPlaygroundWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: PhoenixPlayground.PubSub,
+  pubsub_server: PhoenixPlayground.Pubsub,
   live_view: [signing_salt: "eGvtySk9"]
 
 config :esbuild,
@@ -21,6 +18,9 @@ config :esbuild,
     cd: Path.expand("../apps/phoenix_playground_web/assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
+
+config :phoenix_playground_domain,
+  ecto_repos: [PhoenixPlaygroundDomain.Repo]
 
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
