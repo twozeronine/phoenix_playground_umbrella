@@ -20,6 +20,14 @@ config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
     ]
   ]
 
+config :phoenix_playground_api, PhoenixPlaygroundApi.Endpoint,
+  http: [ip: {127, 0, 0, 1}, port: 4040],
+  check_origin: false,
+  code_reloader: true,
+  debug_errors: true,
+  secret_key_base: "ZjojS84jSbqXenY5XAjTdh3GbcCPxMP+TTGYs3saZ1LzMQp1NnhwSu6DuTsn3iQi",
+  watchers: []
+
 config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo,
   username: "postgres",
   password: "postgres",

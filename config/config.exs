@@ -10,6 +10,12 @@ config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
   pubsub_server: PhoenixPlayground.Pubsub,
   live_view: [signing_salt: "eGvtySk9"]
 
+config :phoenix_playground_api, PhoenixPlaygroundApi.Endpoint,
+  url: [host: "localhost"],
+  render_errors: [view: PhoenixPlaygroundApi.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: PhoenixPlayground.PubSub,
+  live_view: [signing_salt: "8BfrZ63A"]
+
 config :esbuild,
   version: "0.14.29",
   default: [
