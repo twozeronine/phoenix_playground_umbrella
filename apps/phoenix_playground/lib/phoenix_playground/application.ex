@@ -4,7 +4,8 @@ defmodule PhoenixPlayground.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      PhoenixPlayground.Pubsub.child_spec()
+      PhoenixPlayground.Pubsub.child_spec(),
+      {PhoenixPlayground.Local, Node.self()}
     ]
 
     options = [
