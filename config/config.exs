@@ -34,4 +34,8 @@ config :logger, :console,
 
 config :phoenix, :json_library, Jason
 
+# Cluster topologies
+config :phoenix_playground_cluster, PhoenixPlaygroundCluster,
+  local_epmd: [strategy: Cluster.Strategy.LocalEpmd]
+
 import_config "#{config_env()}.exs"

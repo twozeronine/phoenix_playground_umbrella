@@ -3,11 +3,13 @@ defmodule PhoenixPlaygroundCluster.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [
-
+    [
+      {Cluster.Supervisor,
+       [
+         Application.get_env(:phoenix_playground_cluster, PhoenixPlaygroundCluster),
+         [name: PhoenixPlaygroundCluster]
+       ]}
     ]
-
-    opts = [strategy: :one_for_one, name: PhoenixPlaygroundCluster.Supervisor]
-    Supervisor.start_link(children, opts)
+    |> Supervisor.start_link(name: __MODULE__, strategy: :one_for_one)
   end
 end
