@@ -1,6 +1,8 @@
 defmodule PhoenixPlaygroundWeb.Router do
   use PhoenixPlaygroundWeb, :router
 
+  import Phoenix.LiveDashboard.Router
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -17,16 +19,7 @@ defmodule PhoenixPlaygroundWeb.Router do
   scope "/", PhoenixPlaygroundWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-  end
-
-  if Mix.env() in [:dev, :test] do
-    import Phoenix.LiveDashboard.Router
-
-    scope "/" do
-      pipe_through :browser
-
-      live_dashboard "/dashboard", metrics: PhoenixPlaygroundWeb.Telemetry
-    end
+    live "/", MainLive
+    live_dashboard "/dashboard", metrics: PhoenixPlaygroundWeb.Telemetry
   end
 end

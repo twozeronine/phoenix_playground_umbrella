@@ -7,7 +7,6 @@ defmodule PhoenixPlayground.Local do
 
   @impl true
   def init(name) do
-    IO.inspect(name)
     {:ok, name}
   end
 

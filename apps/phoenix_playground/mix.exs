@@ -27,16 +27,18 @@ defmodule PhoenixPlayground.MixProject do
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
 
-  defp deps do
+  defp deps() do
     [
       {:phoenix_pubsub, "~> 2.0"},
+      {:phoenix_playground_cluster, in_umbrella: true, runtime: true},
       {:jason, "~> 1.2"}
     ]
   end
 
   defp aliases do
     [
-      setup: ["deps.get"]
+      setup: ["deps.get"],
+      "release.setup": []
     ]
   end
 end

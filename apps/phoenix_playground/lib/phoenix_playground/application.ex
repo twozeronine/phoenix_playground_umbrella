@@ -3,16 +3,10 @@ defmodule PhoenixPlayground.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [
+    [
       PhoenixPlayground.Pubsub.child_spec(),
       {PhoenixPlayground.Local, Node.self()}
     ]
-
-    options = [
-      {:name, __MODULE__},
-      {:strategy, :one_for_one}
-    ]
-
-    Supervisor.start_link(children, options)
+    |> Supervisor.start_link(name: __MODULE__, strategy: :one_for_one)
   end
 end
