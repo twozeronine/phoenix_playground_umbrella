@@ -8,7 +8,7 @@ defmodule PhoenixPlaygroundCluster do
     Node.list()
     |> Enum.reduce([], fn node, nodes ->
       if :rpc.call(node, PhoenixPlaygroundCluster, :is_my_application, [application]) do
-        [node | node]
+        [node  | nodes ]
       else
         nodes
       end

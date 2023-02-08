@@ -21,7 +21,6 @@ defmodule PhoenixPlaygroundWeb.MainLive do
 
   @impl true
   def handle_event("my-name", _, socket) do
-    PhoenixPlayground.name() |> IO.inspect()
-    {:noreply, assign(socket, name: PhoenixPlayground.name(), at: DateTime.utc_now())}
+    {:noreply, assign(socket, name: PhoenixPlaygroundDomain.name(), at: DateTime.utc_now())}
   end
 end

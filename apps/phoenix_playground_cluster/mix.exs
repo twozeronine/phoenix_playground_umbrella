@@ -25,6 +25,7 @@ defmodule PhoenixPlaygroundCluster.MixProject do
 
   defp deps do
     [
+      {:phoenix_playground, in_umbrella: true, runtime: true},
       {:libcluster, "~> 3.3"}
     ]
   end

@@ -1,4 +1,4 @@
-defmodule PhoenixPlayground.Local do
+defmodule PhoenixPlaygroundDomain.Local do
   use GenServer
 
   def start_link(name) do

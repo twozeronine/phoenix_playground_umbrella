@@ -30,7 +30,6 @@ defmodule PhoenixPlayground.MixProject do
   defp deps() do
     [
       {:phoenix_pubsub, "~> 2.0"},
-      {:phoenix_playground_cluster, in_umbrella: true, runtime: true},
       {:jason, "~> 1.2"}
     ]
   end
