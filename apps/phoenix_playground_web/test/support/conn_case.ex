@@ -16,7 +16,7 @@ defmodule PhoenixPlaygroundWeb.ConnCase do
   end
 
   setup tags do
-    PhoenixPlaygroundDomain.DataCase.setup_sandbox(tags)
+    PhoenixPlaygroundDomain.Local.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
