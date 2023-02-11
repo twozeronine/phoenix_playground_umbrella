@@ -30,7 +30,8 @@ defmodule PhoenixPlayground.MixProject do
   defp deps() do
     [
       {:phoenix_pubsub, "~> 2.0"},
-      {:jason, "~> 1.2"}
+      {:jason, "~> 1.2"},
+      {:flow, "~> 1.0"}
     ]
   end
 
