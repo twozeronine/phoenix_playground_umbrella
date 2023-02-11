@@ -4,8 +4,7 @@ defmodule PhoenixPlaygroundDomain.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      PhoenixPlaygroundDomain.Repo,
-      {PhoenixPlaygroundDomain.Local, Node.self()}
+      PhoenixPlaygroundDomain.Repo.Local
     ]
 
     opts = [strategy: :one_for_one, name: __MODULE__]

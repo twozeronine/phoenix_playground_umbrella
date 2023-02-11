@@ -7,7 +7,7 @@ config :phoenix_playground_web, PhoenixPlaygroundWeb.Endpoint,
 config :phoenix_playground_api, PhoenixPlaygroundApi.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo,
+config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo.Local,
   database: "phoenix_playground_prod",
   pool_size: 10,
   port: 5432,
