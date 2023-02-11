@@ -31,7 +31,9 @@ defmodule PhoenixPlayground.MixProject do
     [
       {:phoenix_pubsub, "~> 2.0"},
       {:jason, "~> 1.2"},
-      {:flow, "~> 1.0"}
+      {:flow, "~> 1.0"},
+      {:benchee, "~> 1.0", only: :dev},
+      {:benchee_html, "~> 1.0", only: :dev}
     ]
   end
 
