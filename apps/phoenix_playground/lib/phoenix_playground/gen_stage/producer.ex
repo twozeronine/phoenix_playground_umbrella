@@ -8,7 +8,7 @@ defmodule PhoenixPlayground.GenStage.Producer do
   def init(counter), do: {:producer, counter}
 
   def handle_demand(demand, state) do
-    events = Enum.to_list(state..(state + demand - 1))
+    events = Enum.to_list(1..100)
     {:noreply, events, state + demand}
   end
 end
