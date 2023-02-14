@@ -28,7 +28,8 @@ defmodule PhoenixPlaygroundDomain.MixProject do
       {:phoenix_playground, in_umbrella: true},
       {:phoenix_playground_cluster, in_umbrella: true, runtime: true},
       {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:mimic, "~> 1.7", only: :test}
     ]
   end
 

@@ -10,7 +10,7 @@ config :phoenix_playground_api, PhoenixPlaygroundApi.Endpoint,
   secret_key_base: "pSzKZOLqSvJroxjbQr4Hg1Xybewvgl6OCMjqX6a+x9l+LVoHFPEnFrMJEBUZbtLG",
   server: false
 
-config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo.Local,
+config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",

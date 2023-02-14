@@ -19,7 +19,7 @@ defmodule PhoenixPlaygroundDomain.DataCase do
 
   def setup_sandbox(tags) do
     pid =
-      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixPlaygroundDomain.Repo.Local,
+      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixPlaygroundDomain.Repo,
         shared: not tags[:async]
       )
 

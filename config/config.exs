@@ -26,9 +26,9 @@ config :esbuild,
   ]
 
 config :phoenix_playground_domain,
-  ecto_repos: [PhoenixPlaygroundDomain.Repo.Local]
+  ecto_repos: [PhoenixPlaygroundDomain.Repo]
 
-config :ecto_sql, migration_module: PhoenixPlaygroundDomain.Repo.Local
+config :ecto_sql, migration_module: PhoenixPlaygroundDomain.Repo
 
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
@@ -37,7 +37,6 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 # Cluster topologies
-config :phoenix_playground_cluster, PhoenixPlaygroundCluster,
-  local_epmd: [strategy: Cluster.Strategy.LocalEpmd]
+config :phoenix_playground_cluster, PhoenixPlaygroundCluster, []
 
 import_config "#{config_env()}.exs"

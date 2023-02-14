@@ -1,4 +1,4 @@
-defmodule PhoenixPlaygroundDomain.Repo.Local.Migrations.CreateUsersTable do
+defmodule PhoenixPlaygroundDomain.Repo.Migrations.CreateUsersTable do
   use Ecto.Migration
 
   @table "users"

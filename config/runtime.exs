@@ -3,7 +3,7 @@ import Config
 if config_env() == :prod do
   maybe_ipv6 = if System.get_env("ECTO_IPV6"), do: [:inet6], else: []
 
-  config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo.Local,
+  config :phoenix_playground_domain, PhoenixPlaygroundDomain.Repo,
     username: System.get_env("REPO_USERNAME"),
     password: System.get_env("REPO_PASSWORD"),
     hostname: System.get_env("REPO_HOSTNAME"),
