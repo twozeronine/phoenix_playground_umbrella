@@ -28,6 +28,8 @@ config :esbuild,
 config :phoenix_playground_domain,
   ecto_repos: [PhoenixPlaygroundDomain.Repo.Local]
 
+config :ecto_sql, migration_module: PhoenixPlaygroundDomain.Repo.Local
+
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]

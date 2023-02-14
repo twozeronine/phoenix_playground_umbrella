@@ -33,7 +33,8 @@ defmodule PhoenixPlayground.MixProject do
       {:jason, "~> 1.2"},
       {:flow, "~> 1.0"},
       {:benchee, "~> 1.0", only: :dev},
-      {:benchee_html, "~> 1.0", only: :dev}
+      {:benchee_html, "~> 1.0", only: :dev},
+      {:pbkdf2_elixir, "~> 2.0"}
     ]
   end
 

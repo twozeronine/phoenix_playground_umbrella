@@ -13,6 +13,7 @@ Benchee.run(
     "Huge" => "MOCK_DATA_HUGE.txt"
   },
   formatters: [
-    {Benchee.Formatters.HTML, file: "apps/phoenix_playground/lib/phoenix_playground/count_file_word_output/test.html"}
+    {Benchee.Formatters.HTML,
+     file: "apps/phoenix_playground/lib/phoenix_playground/count_file_word_output/test.html"}
   ]
 )
