@@ -32,7 +32,7 @@ defmodule PhoenixPlaygroundWeb.MixProject do
     [
       {:phoenix_playground, in_umbrella: true, runtime: true},
       {:phoenix_playground_cluster, in_umbrella: true, runtime: true},
-      {:phoenix_playground_domain, in_umbrella: true, runtime: false},
+      {:phoenix_playground_domain, in_umbrella: true},
       {:phoenix, "~> 1.6.15"},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.0"},
